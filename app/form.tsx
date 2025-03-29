@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import { addUser } from "@/lib/server/action";
 import { useActionState } from "react";
 
 export default function UserForm() {
-const[state,action]=useActionState(addUser,"")
+  const [state, action] = useActionState(addUser, "");
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
@@ -11,7 +11,10 @@ const[state,action]=useActionState(addUser,"")
         <h1 className="text-2xl font-bold mb-6 text-center">Add User</h1>
         <form className="space-y-4" action={action}>
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-gray-700"
+            >
               Name
             </label>
             <input
@@ -23,7 +26,10 @@ const[state,action]=useActionState(addUser,"")
             />
           </div>
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700"
+            >
               Email
             </label>
             <input
@@ -35,7 +41,10 @@ const[state,action]=useActionState(addUser,"")
             />
           </div>
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium text-gray-700"
+            >
               Password
             </label>
             <input

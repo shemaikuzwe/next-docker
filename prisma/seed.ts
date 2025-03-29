@@ -4,7 +4,7 @@ const prisma = new PrismaClient();
 
 async function main() {
   console.log("Seeding users...");
-
+  await prisma.user.deleteMany();
   const users = [
     { name: "John Doe", email: "john@example.com", password: "1234" },
     { name: "Jane Smith", email: "jane@example.com", password: "1234" },

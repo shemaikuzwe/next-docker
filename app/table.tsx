@@ -1,11 +1,7 @@
-import { User } from "@prisma/client";
+import { getUsers } from "@/lib/server/data";
 
 export default async function UsersTable() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/users`);
-  if (!res.ok) {
-    throw new Error("Failed to fetch users");
-  }
-  const users = (await res.json()) as User[];
+  const users = await getUsers();
 
   if (users.length === 0) {
     return (
