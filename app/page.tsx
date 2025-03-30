@@ -6,6 +6,7 @@ export default function Home() {
     <div className="flex  flex-col gap-3 justify-center items-center h-screen bg-gray-100">
       <UserForm />
       <UsersTable />
+      
     </div>
   );
 }

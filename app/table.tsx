@@ -16,7 +16,7 @@ export default async function UsersTable() {
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <div className="w-full max-w-4xl bg-white p-6 rounded shadow-md">
-        <h1 className="text-2xl font-bold mb-4 text-center">Users Table</h1>
+        <h1 className="text-2xl font-bold mb-4 text-center">Users</h1>
         <table className="min-w-full border-collapse border border-gray-300">
           <thead>
             <tr className="bg-gray-200">
