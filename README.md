@@ -46,4 +46,4 @@ volumes:
 5. Check this repo to see both dev and prod Dockerfiles and their compose.yml
 
 ***
-The Goal of this repo is to make it simple to create Docker images for Next js Projects.🤩🤩🤩
+The Goal of this repo is to make it simple to create Docker images for Next js Projects.🤩 🤩 🤩
