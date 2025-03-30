@@ -1,9 +1,9 @@
-FROM node:18-alpine 
+FROM node:21-alpine 
 
 WORKDIR /app
 
+COPY package.json pnpm-lock.yaml ./
 
-COPY package.json pnpm-lock.yaml  ./
 
 RUN  corepack enable pnpm && pnpm i --frozen-lockfile
 
@@ -11,8 +11,5 @@ COPY . .
 
 RUN npx prisma generate --schema=./prisma/schema.prisma
 
-RUN pnpm run  build
 
-ENV NODE_ENV=production
-
-CMD ["npm ", "start"]
+CMD ["npm", "run", "dev"]
